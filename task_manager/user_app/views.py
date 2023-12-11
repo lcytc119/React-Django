@@ -47,7 +47,7 @@ def user_log_in(request):
 
 @api_view(["GET"])
 def curr_user(request):
-    print(request.headers)
+    # print(request.headers)
     if request.user.is_authenticated:
         #                       format      query                       options
         user_info = serialize("json", [request.user], fields = ['name', 'email'])
